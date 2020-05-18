@@ -14,7 +14,7 @@ public interface CarDao {
     @Select("select * from carMessage where id = #{id}")
     Car findById(int id);
 
-    @Select("select * from carMessage where carName = #{carName}")
+    @Select("select * from carMessage where LOWER(carName) like #{carName}")
     List<Car> findByCarName(String carName);
 
     @Delete("delete from carMessage where id = #{id}")

@@ -1,17 +1,18 @@
 package com.jkxy.car.api.service.Impl;
 
-import com.jkxy.car.api.dao.CarDao;
 import com.jkxy.car.api.pojo.Car;
 import com.jkxy.car.api.service.CarService;
+import com.jkxy.car.api.dao.CarDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 
 @Service("carService")
 public class CarServiceImpl implements CarService {
-    @Autowired
+    @Resource
     private CarDao carDao;
 
     @Override
